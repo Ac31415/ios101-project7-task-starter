@@ -64,20 +64,10 @@ extension Task {
         // 2.
         let encodedData = try! JSONEncoder().encode(tasks)
         // 3.
-        defaults.set(encodedData, forKey: key)
+        defaults.set(encodedData, forKey: "tasks")
         
         
         
-    }
-    
-    
-    static func save(_ movies: [Movie], forKey key: String) {
-        // 1.
-        let defaults = UserDefaults.standard
-        // 2.
-        let encodedData = try! JSONEncoder().encode(movies)
-        // 3.
-        defaults.set(encodedData, forKey: key)
     }
     
     
@@ -87,12 +77,41 @@ extension Task {
         
         // TODO: Get the array of saved tasks from UserDefaults
 
-        return [] // 👈 replace with returned saved tasks
+        // 1.
+        let defaults = UserDefaults.standard
+        // 2.
+        if let data = defaults.data(forKey: "tasks") {
+            // 3.
+            let decodedTasks = try! JSONDecoder().decode([Task].self, from: data)
+            // 4.
+            return decodedTasks
+        } else {
+            // 5.
+            return []
+        }
     }
 
     // Add a new task or update an existing task with the current task.
     func save() {
 
         // TODO: Save the current task
+        
+        // 1. Get the array of saved tasks
+        var tasks = Task.getTasks()
+        
+        // 2. Check if the current task already exists in the array
+        if let existingIndex = tasks.firstIndex(where: { $0.id == self.id }) {
+            // 2.1 If it exists, remove the existing task
+            tasks.remove(at: existingIndex)
+            // 2.2 Insert the updated task in place of the removed one
+            tasks.insert(self, at: existingIndex)
+        } else {
+            // 3. If no matching task exists, add the new task to the end
+            tasks.append(self)
+        }
+        
+        // 4. Save the updated tasks array to UserDefaults
+        Task.save(tasks)
+        
     }
 }

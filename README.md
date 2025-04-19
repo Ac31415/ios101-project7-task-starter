@@ -1,21 +1,21 @@
-# Project 7 - *Name of App Here*
+# Project 7 - *Tasks*
 
 Submitted by: **Wen-Chung Cheng**
 
-**Name of your app** is an app that ... [TODO] 
+**Tasks** is an app that stores tasks 
 
-Time spent: **X** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] App displays a list of tasks
-- [ ] Users can add tasks to the list
-- [ ] Session persists when application is closed and relaunched (tasks dont get deleted when closing app) 
-  - [ ] Note: You have to quit the app, not minimize it, in order to see the persistence.
-- [ ] Tasks can be deleted
-- [ ] Users have a calendar view via navigation controller that displays tasks	
+- [x] App displays a list of tasks
+- [x] Users can add tasks to the list
+- [x] Session persists when application is closed and relaunched (tasks dont get deleted when closing app) 
+  - [x] Note: You have to quit the app, not minimize it, in order to see the persistence.
+- [x] Tasks can be deleted
+- [x] Users have a calendar view via navigation controller that displays tasks	
 
 
 The following **additional** features are implemented:
@@ -27,11 +27,11 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 <div>
-    <a href="https://www.loom.com/share/8627dd477b204592a8c6c298b7c53cc1">
-      <p>Xcode - ios101-project7-task — Task.swift - 17 April 2025 - Watch Video</p>
+    <a href="https://www.loom.com/share/43a1f688d0aa49a5b3c3a24c0c668922">
+      <p>Simulator - iPhone 16 Pro Max - 19 April 2025 - Watch Video</p>
     </a>
-    <a href="https://www.loom.com/share/8627dd477b204592a8c6c298b7c53cc1">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/8627dd477b204592a8c6c298b7c53cc1-fbecc055f083613e-full-play.gif">
+    <a href="https://www.loom.com/share/43a1f688d0aa49a5b3c3a24c0c668922">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/43a1f688d0aa49a5b3c3a24c0c668922-99ed193a1369c043-full-play.gif">
     </a>
   </div>
 
